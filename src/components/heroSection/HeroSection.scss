@@ -17,7 +17,7 @@
   height: 100%;
   display: flex;
   gap: 200px;
-  @include mobile{
+  @include tablet{
     flex-direction: column;
     top: 4rem;
     gap: 20px;
@@ -28,20 +28,22 @@
     h1{
       font-size: 4rem;
       line-height: 65px;
+      margin-bottom: 2.3rem;
       @include tablet{
         font-size: 3rem;
         line-height: 55px;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        margin-top: 12rem;
       }
       @include mobile{
         font-size: 2.5rem;
         line-height: 45px;
         margin-bottom: 2.3rem;
-
+        margin-top: 3rem;
       }
     }
     p{
-      margin-top: -30px;
+      margin-bottom: 1rem;
       @include mobile{
         font-size: .9rem;
       }
