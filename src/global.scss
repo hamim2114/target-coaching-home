@@ -6,7 +6,7 @@ $clr-0: #F24080;
 $clr-1: #41246D;
 
 $mbl-w: 600px;
-$tab-w: 1200px;
+$tab-w: 1100px;
 
 @mixin tablet {
   @media only screen and (max-width: $tab-w) {

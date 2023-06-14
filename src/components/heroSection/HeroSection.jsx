@@ -17,7 +17,7 @@ const HeroSection = () => {
           <li></li>
         </ul>
       </div >
-      <marquee className='marque' behavior="" direction=""><b>NOTICE:</b>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, accusantium.</marquee>
+      <marquee className='marque' behavior="" direction=""><b>NOTICE: !! SITE UNDER DEVELOPMENT !!</b></marquee>
       <div className="heroSec">
         <div className="info">
           <h1>Providing Best Education For Brighter future</h1>
