@@ -1,0 +1,32 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$bodyBg: #F5FCFF;
+$textColor: #494949;
+$clr-0: #F24080;
+$clr-1: #41246D;
+
+$mbl-w: 600px;
+$tab-w: 1200px;
+
+@mixin tablet {
+  @media only screen and (max-width: $tab-w) {
+    @content
+  }
+}
+@mixin mobile {
+  @media only screen and (max-width: $mbl-w) {
+    @content
+  }
+}
+
+@mixin container{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@mixin flex($alignItem: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+}

@@ -1,0 +1,175 @@
+@import '../../global.scss';
+.welcomeSecMain{
+  position: relative;
+  height: 90vh;
+}
+.welcome-sec{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $textColor;
+  @include container;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    font-size: 3rem;
+    margin-top: 1em;
+    span{
+      color: $clr-0;
+    }
+    @include mobile {
+      font-size: 2.3rem;
+      line-height: 53px;
+      text-align: center;
+    }
+  }
+  p{
+    max-width: 600px;
+    text-align: center;
+    transform: translateY(-20px);
+  }
+  &-features{
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+    position: relative;
+    @include mobile {
+      flex-direction: column
+    }
+
+    .features-box{
+      @include flex();
+      flex-direction: column;
+      padding: 20px 30px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+      transition: 1s ease-in-out;
+      position: relative;
+      overflow-x: hidden;
+      z-index: 1;
+      &:hover{
+        color: #ffffff;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        border-radius: 20px;
+        top: 0;
+        left: 0;
+        width: 2%;
+        height: 100%;
+        background-color: $clr-1;
+        transition: all .3s ease;
+        z-index: -1;
+      }
+      &:hover::before{
+        width: 100%;
+      }
+      .welcome-sec-icon{
+        font-size: 3rem;
+        &:hover{
+          fill: #ffffff;
+        }
+      }
+      h3{}
+      p{
+        font-size: 16px;
+        max-width: 300px;
+      }
+      &.lg{
+       background-color: #ffffff;
+      button{
+        position: relative;
+        border: 2px solid $clr-0;
+        padding: 10px 20px;
+        border-radius: 50px;
+        overflow-x: hidden;
+        transition: all .3s ease;
+        z-index: 10;
+        color: $clr-0;
+        &:hover{
+          color: #ffffff;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50px;
+          width: 0%;
+          height: 100%;
+          background-color: $clr-0;
+          transition: all .3s ease;
+          z-index: -1;
+        }
+        &:hover::before{
+          width: 100%;
+        }
+      }
+      }
+      img{
+        width: 50px;
+      }
+      .kidimg{
+        width: 80px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.waveBody {
+  margin: auto;
+  transform: translateY(-90px);
+  overflow-x: hidden;
+  position: relative;
+
+.wave {
+    background: $bodyBg;
+    border-radius: 1000% 1000% 0 0;
+    width: 200%;
+    height: 20em;
+    animation: wave 10s -3s linear infinite;
+    top: 0;
+    left: 0;
+}
+
+.wave:nth-child(2) {
+  position: absolute;
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+}
+
+.wave:nth-child(3) {
+  position: absolute;
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.8;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+}
