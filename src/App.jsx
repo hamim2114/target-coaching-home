@@ -9,9 +9,12 @@ function App() {
   const [animateExit, setAnimateExit] = useState(true)
 
   useEffect(() => {
-   window.onload = () => {
+  //  window.onload = () => {
+  //   setAnimateExit(false)
+  //  }
+  setTimeout(() => {
     setAnimateExit(false)
-   }
+  },[1000])
   }, [])
 
   return (
