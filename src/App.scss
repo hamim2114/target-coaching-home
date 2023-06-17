@@ -1,0 +1,15 @@
+@import './global.scss';
+
+.app{
+  .slideBg{
+    position: absolute;
+    width: 100%;
+    height: 500vh;
+    background-color: $bodyBg;
+    z-index: 999;
+    transition: 2s ease-in-out;
+    &.active{
+      height: 0vh;
+    }
+  }
+}
