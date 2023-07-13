@@ -48,8 +48,13 @@
       @include flex();
       justify-content: space-between;
       padding-top: 4rem;
-      flex-wrap: wrap;
-
+      @include mobile {
+        flex-direction: column;
+        gap: 20px;
+      }
+      @include tablet {
+        flex-wrap: wrap
+      }
       .achievement-item {
         @include flex();
         gap: 20px;

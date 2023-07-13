@@ -1,25 +1,18 @@
 @import '../../global.scss';
 
 .classes {
+  padding: 7rem 0;
   @include mobile {
-    padding: 0;
-    padding-bottom: 0
-  }
-  @include tablet {
-   padding: 2rem 0;
+    padding: 4rem 0;
   }
   &-wrapper {
     @include container;
-    @include tablet {
-      margin-top: 23rem;
-    }
     .top {
       text-align: center;
       h1 {
         font-size: 3rem;
         @include mobile {
           font-size: 2.3rem;
-          padding-top: 3rem;
         }
         span {
           color: $clr-0;
@@ -32,7 +25,6 @@
       }
     }
     .bottom {
-      margin-bottom: 3rem;
       width: 100%;
       display: flex;
       justify-content: center;

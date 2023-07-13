@@ -1,0 +1,54 @@
+@import '../../global.scss';
+
+.waveBody {
+  height: 90px;
+  top: -5rem;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  .wave {
+    background: $bodyBg;
+    border-radius: 1000% 1000% 0 0;
+    width: 200%;
+    height: 20em;
+    animation: wave 10s -3s linear infinite;
+    top: 0;
+    left: 0;
+  }
+
+  .wave:nth-child(2) {
+    position: absolute;
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+  }
+
+  .wave:nth-child(3) {
+    position: absolute;
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.8;
+  }
+
+  @keyframes wave {
+    2% {
+      transform: translateX(1);
+    }
+
+    25% {
+      transform: translateX(-25%);
+    }
+
+    50% {
+      transform: translateX(-50%);
+    }
+
+    75% {
+      transform: translateX(-25%);
+    }
+
+    100% {
+      transform: translateX(1);
+    }
+  }
+}

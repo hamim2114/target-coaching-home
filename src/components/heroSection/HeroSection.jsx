@@ -2,7 +2,7 @@ import './HeroSection.scss'
 import { Typewriter } from 'react-simple-typewriter'
 
 const HeroSection = () => {
- 
+
   return (
     <main>
       <div className="area" >

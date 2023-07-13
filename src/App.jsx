@@ -11,6 +11,7 @@ import Achievment from './components/achievment/Achievment';
 import Footer from './components/footer/Footer';
 import Teachers from './components/teachers/Teachers';
 import Blogs from './components/blogs/Blogs';
+import Wave from './components/wave/Wave';
 
 function App() {
   const [animateExit, setAnimateExit] = useState(true)
@@ -30,6 +31,7 @@ function App() {
       </div>
       <Navbar />
       <HeroSection />
+      <Wave/>
       <WelcomeSec />
       <Classes />
       <Achievment />

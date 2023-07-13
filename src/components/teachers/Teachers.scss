@@ -1,13 +1,12 @@
 @import '../../global.scss';
 
 .teachers {
-  background-color: #fff;
+  @include container;
+  padding: 7rem 0 0;
+  @include mobile {
+    padding:4rem 0 0;
+  }
   &-wrapper {
-    @include container;
-    padding:4rem 0 2rem;
-    @include mobile {
-      padding:3rem 0 2rem;
-    }
     .top {
       text-align: center;
       h1 {
@@ -22,59 +21,38 @@
       p {
         margin: auto;
         max-width: 600px;
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
         @include mobile {
-          margin-bottom: 1rem;
+          margin-bottom: 3rem;
     
         }
       }
     }
     .bottom {
-      margin-bottom: 3rem;
       width: 100%;
       display: flex;
       justify-content: center;
       flex-direction: column;
+      .teacher-sec {
+        @include flex();
+        flex-wrap: wrap;
+        gap: 20px;
+        @include mobile {
+          gap: 10px;
+         
+        }
+      }
       .slick-slider {
       }
       .btn {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        align-self: center;
         padding: 0 50px;
         @include mobile {
-          padding: 0 20px;
+          padding: 20px;
         }
         .more-btn {
           @include outline-button;
-        }
-        .prev-next {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 20px;
-          .s-button {
-            border: 2px solid $clr-0;
-            cursor: pointer;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50px;
-            color: $clr-0;
-            font-size: 40px;
-            transition: 0.5s;
-            &:hover {
-              background-color: $clr-0;
-              color: #fff;
-              transform: scale(1.1);
-            }
-            &:active {
-              background-color: #fff;
-              color: $clr-0;
-            }
-          }
         }
       }
     }
