@@ -2,6 +2,12 @@
 .welcomeSecMain{
   position: relative;
   height: 90vh;
+  @include mobile {
+    height: 95vh;
+  }
+  // @include tablet {
+  //   height: 5vh;
+  // }
 }
 .welcome-sec{
   position: absolute;
@@ -22,7 +28,7 @@
     }
     @include mobile {
       font-size: 2.3rem;
-      line-height: 53px;
+      line-height: 43px;
       text-align: center;
     }
   }
@@ -37,8 +43,8 @@
     gap: 20px;
     margin-top: 50px;
     position: relative;
-    @include tablet {
-      flex-direction: column
+      @media screen and (max-width: 1100px){
+        flex-direction: column
     }
 
     .features-box{
@@ -49,7 +55,7 @@
       height: 200px;
       background-color: #ffffff;
       border-radius: 20px;
-      box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+      @include shadow;
       transition: 1s ease-in-out;
       position: relative;
       overflow-x: hidden;
@@ -90,33 +96,8 @@
       &.lg{
         height: 300px;
       button{
-        position: relative;
-        border: 2px solid $clr-0;
-        padding: 10px 20px;
+        @include outline-button;
         margin-top: 20px;
-        border-radius: 50px;
-        overflow-x: hidden;
-        transition: all .3s ease;
-        z-index: 10;
-        color: $clr-0;
-        &:hover{
-          color: #ffffff;
-        }
-        &::before{
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 50px;
-          width: 0%;
-          height: 100%;
-          background-color: $clr-0;
-          transition: all .3s ease;
-          z-index: -1;
-        }
-        &:hover::before{
-          width: 100%;
-        }
       }
       }
       img{
@@ -136,6 +117,9 @@
   transform: translateY(-90px);
   overflow-x: hidden;
   position: relative;
+  // @include tablet {
+  //   transform: translateY(-30px);
+  // }
 
 .wave {
     background: $bodyBg;

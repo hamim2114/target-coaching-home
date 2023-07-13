@@ -1,0 +1,49 @@
+@import '../../global.scss';
+
+.blog-sec {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+  position: relative;
+  h1 {
+    font-size: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    color: $textColor;
+    @include mobile {
+      font-size: 2.3rem;
+      padding-top: 3rem;
+    }
+    span{
+      color: $clr-0;
+    }
+  }
+  p{
+    margin-bottom: 3rem;
+    max-width: 500px;
+    text-align: center;
+  }
+  .blog-data {
+    @include flex();
+    flex-wrap: wrap;
+    gap: 30px;
+    @include mobile {
+    
+    }
+  }
+  .more-blog-btn {
+    @include flex();
+    gap: 5px;
+    color: $clr-1;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 2rem;
+    cursor: pointer;
+    @include mobile {
+      
+    }
+  }
+}

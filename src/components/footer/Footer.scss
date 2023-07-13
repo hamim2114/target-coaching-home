@@ -1,0 +1,68 @@
+@import '../../global.scss';
+
+.footer {
+  background-color: $clr-1;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+
+  .footer-container {
+    @include container;
+    border-bottom: 2px solid #ffffff41;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    @include mobile {
+      flex-direction: column;
+      gap: 39px;
+    }
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+
+      .footer-about {
+        color: white;
+        .footer-text {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .footer-info {
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.5rem;
+
+          .footer-icon {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+
+      
+    }
+
+    .footer-links {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .footer-heading {
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      a {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    
+  }
+
+  .footer-credit {
+    color: white;
+    margin-top: 2rem;
+  }
+}

@@ -18,9 +18,10 @@ const Navbar = () => {
           <li>Home</li>
           <li>About Us</li>
           <li>Classes</li>
+          <li>Events</li>
+          <li>Blogs</li>
           <li>Gallery</li>
           <li>Teachers</li>
-          <li>Events</li>
           <li>Contacts</li>
         <button className='navBtn'>JOIN US NOW</button>
         </ul>

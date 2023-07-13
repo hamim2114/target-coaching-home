@@ -1,32 +1,65 @@
 // @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-$bodyBg: #F5FCFF;
+$bodyBg: #f5fcff;
 $textColor: #494949;
-$clr-0: #F24080;
-$clr-1: #41246D;
+$clr-0: #f24080;
+$clr-1: #41246d;
 
 $mbl-w: 600px;
 $tab-w: 1100px;
 
 @mixin tablet {
-  @media only screen and (max-width: $tab-w) {
-    @content
+  @media screen and (max-width: $tab-w) {
+    @content;
   }
 }
 @mixin mobile {
-  @media only screen and (max-width: $mbl-w) {
-    @content
+  @media screen and (max-width: $mbl-w) {
+    @content;
   }
 }
 
-@mixin container{
+@mixin container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 1rem;
-}
+};
+
+@mixin shadow {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+};
 
 @mixin flex($alignItem: center, $justifyContent: center) {
   display: flex;
   align-items: $alignItem;
   justify-content: $justifyContent;
-}
+};
+
+@mixin outline-button {
+  position: relative;
+  border: 2px solid $clr-0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: $clr-0;
+  &:hover {
+    color: #ffffff;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    width: 0%;
+    height: 100%;
+    background-color: $clr-0;
+    transition: all 0.3s ease;
+    z-index: -1;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+};

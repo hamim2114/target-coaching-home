@@ -1,0 +1,89 @@
+@import '../../global.scss';
+
+.class {
+  width: 300px;
+  border-radius: 10px;
+  background-color: #fff;
+  @include shadow;
+  @include flex();
+  margin: 1rem 0;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+  transition: .5s ease;
+  position: relative;
+  @include mobile {
+    width: 100%;
+    border-radius: 0px;
+  }
+  &::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 62%;
+    opacity: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    top: 0;
+    background-color: #00000060;
+    transition: .5s ease;
+  }
+  &:hover{
+    z-index: 12;
+    transition: .5s ease;
+    transform: scale(1.05);
+    .details{
+      opacity: 1;
+    }
+  }
+  &:hover::before{
+    opacity: 1;
+  }
+  img{
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom: 3px solid $clr-0;
+    object-fit: cover;
+    @include mobile {
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+
+    }
+  }
+  .date-sec{
+    @include flex();
+    gap: 10px;
+    color: $textColor;
+    .day{
+      @include flex();
+      gap: 5px;
+      svg{
+        color: $clr-0
+      }
+    }
+    .time{
+      @include flex();
+      gap: 5px;
+      svg{
+        color: $clr-0
+      }
+    }
+  }
+  h3{
+    text-align: center;
+    color: $textColor;
+    margin-bottom: 15px;
+  }
+  .details{
+    position: absolute;
+    @include flex();
+    gap: 10px;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+    font-size: 20px;
+    top: 90px;
+  }
+}

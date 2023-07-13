@@ -19,48 +19,63 @@
   gap: 200px;
   @include tablet{
     flex-direction: column;
-    top: 4rem;
-    gap: 20px;
+    top: 8rem;
+    gap: 0px;
   }
   .info{
-  
     color: #fff;
+    .typewriter{
+      @include mobile {
+        margin-bottom: 1.2rem;
+
+      }
+    }
     h1{
-      font-size: 4rem;
-      line-height: 65px;
-      margin-bottom: 2.3rem;
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: 60px;
+      margin-bottom: 1rem;
       @include tablet{
         font-size: 3rem;
         line-height: 55px;
         margin-bottom: 2rem;
-        margin-top: 12rem;
+        margin-top: 1rem;
       }
       @include mobile{
-        font-size: 2.5rem;
-        line-height: 45px;
-        margin-bottom: 2.3rem;
+        font-size: 2.3rem;
+        line-height: 37px;
+        margin-bottom: 2rem;
         margin-top: -1rem;
       }
     }
     p{
       margin-bottom: 1rem;
+      font-size: 14px;
+      font-weight: 300;
       @include mobile{
         font-size: .9rem;
       }
     }
     .heroBtn{
       background-color: $clr-0;
-      padding: 13px 60px;
-      font-size: 20px;
+      border: 1px solid $clr-0;
+      padding: 14px 60px;
+      font-size: 15px;
       font-weight: bold;
       color: #fff;
-      border-radius: 5px;
+      transition: .5s;
+      &:hover{
+        background-color: transparent;
+      }
     }
   }
   .heroImg{
    animation: imgWave 10s linear infinite;
+   @include tablet {
+    opacity: 0;
+   }
     img{
-      width: 350px;
+      width: 300px;
       @include tablet{
         margin-right: 2rem;
       }
@@ -188,5 +203,78 @@
       opacity: 0;
       border-radius: 50%;
   }
-
 }
+
+//for type effect
+$chWidth: 0.49em;
+// Word length
+$chCount: 10;
+// Typing animation length
+$typeDuration: 180ms * $chCount;
+
+$color: slateblue;
+$bg: #f7f3ff;
+$cursor: scale-color($color, $lightness: -60%);
+
+.type-animation {
+	// Required for keeping expected alignment
+	display: inline-flex;
+	// Start out by hiding via width and overflow
+	width: 0;
+	overflow: hidden;
+	// Leave room for cursor!
+	padding-right: 0.08em;
+	position: relative;
+
+	&:after {
+		content: "";
+		background: $bg;
+		position: absolute;
+		right: 0;
+		top: -0.05em;
+		bottom: -0.05em;
+		width: 0.08em;
+		border-right: 2px solid transparent;
+	}
+
+	&.animating {
+		animation: type 2s ;
+		// "stick" to last frame
+		animation-fill-mode: forwards;
+		animation-delay: 3s;
+
+		&:after {
+			$cursorLoopCount: ((($chCount + 1) * 180)/320) + 3;
+			animation: cursor 320ms $cursorLoopCount ease-in-out;
+		}
+	}
+}
+
+@keyframes cursor {
+	0%,
+	100% {
+		border-color: $bg;
+	}
+	50% {
+		border-color: $cursor;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+$frameSize: calc(100 / 10);
+@keyframes type {
+	@for $ch from 1 to $chCount {
+		$frame: $ch * $frameSize;
+		#{$frame}% {
+			width: $ch * $chWidth;
+		}
+	}
+	100% {
+		width: ($chCount - 1) * $chWidth;
+		padding-right: 0;
+	}
+}
+
+
