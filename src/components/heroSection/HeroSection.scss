@@ -241,7 +241,7 @@ $cursor: scale-color($color, $lightness: -60%);
 		animation: type 2s ;
 		// "stick" to last frame
 		animation-fill-mode: forwards;
-		animation-delay: 3s;
+		animation-delay: 2s;
 
 		&:after {
 			$cursorLoopCount: ((($chCount + 1) * 180)/320) + 3;
@@ -276,7 +276,5 @@ $frameSize: calc(100 / 10);
 		padding-right: 0;
 	}
 }
-
-
 
 

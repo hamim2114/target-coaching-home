@@ -1,14 +1,15 @@
 import { useRef } from 'react';
-import Class from '../class/Class'
-import './Classes.scss'
+import './Courses.scss'
 import Slider from 'react-slick'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import Course from '../course/Course';
 
-const Classes = () => {
+const Courses = () => {
   const settings = {
     infinite: true,
     speed: 1000,
     arrows: false,
+    dots: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
@@ -51,23 +52,24 @@ const Classes = () => {
     sliderRef.current.slickPrev();
   };
   return (
-    <div className="classes">
-      <div className="classes-wrapper">
+    <div className="courses">
+      <div className="courses-wrapper">
         <div className="top">
-          <h1>Our <span>Classes</span> </h1>
+          <h1>Our <span>Course</span> </h1>
           <p>Application programming interface voice-over (vo) instructor led training br curation, user created content</p>
         </div>
         <div className="bottom">
           <Slider ref={sliderRef} {...settings}>
-            <Class />
-            <Class />
-            <Class />
-            <Class />
-            <Class />
-            <Class />
+            <Course />
+            <Course />
+            <Course />
+            <Course />
+            <Course />
+            <Course />
+            <Course />
           </Slider>
           <div className='btn'>
-            <button className='more-btn'>More Classes</button>
+            <button className='more-btn'>All Course</button>
             <div className="prev-next">
               <div className="s-button" onClick={previous}>
                 <IoIosArrowBack />
@@ -83,4 +85,4 @@ const Classes = () => {
   )
 }
 
-export default Classes
+export default Courses

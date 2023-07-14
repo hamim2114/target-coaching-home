@@ -6,17 +6,19 @@
   left: 0;
   right: 0;
   z-index: 99;
-  transition: all 1s ease;
-  @include tablet {
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(3px);
-    box-shadow: 0px 3px 5px #00000021;
-    color: rgb(23, 48, 48);
+  transition: all .5s ease;
+  &.scrollup {
+    transform: translateY(-100%);
   }
   &.active {
     background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 3px 5px #00000021;
+    backdrop-filter: blur(10px);
+    @include shadow;
+    color: rgb(23, 48, 48);
+  }
+  @include tablet {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 3px 5px 5px #00000021;
     color: rgb(23, 48, 48);
   }
 }
@@ -26,7 +28,8 @@
   padding: 16px 1rem;
   width: 100%;
   color: #fff;
-  transition: .5s ease;
+ 
+  // transition: .5s ease;
   @include flex(center, space-between);
   .logo {
     font-size: 2rem;
@@ -40,16 +43,27 @@
     @include flex;
     gap: 20px;
     transition: .5s ease-in-out;
-    li {
+    .link {
+      color: inherit;
+      text-decoration: none;
       cursor: pointer;
       &:hover{
         color: $clr-0;
+      }
+      &:nth-child(8) {
+        color: $clr-0;
+        font-weight: bold;
+      }
+      &.active {
+        color: $clr-0;
+        // transform: translateY(-5px);
+        border-bottom: 2px solid $clr-0;
       }
     }
     @include tablet {
       flex-direction: column;
       position: absolute;
-      top: 4.2rem;
+      top: 4.3rem;
       right: -300px;
       height: 100vh;
       padding-right: 6rem;
@@ -60,6 +74,7 @@
       justify-content: start;
       background-color: rgb(255, 255, 255);
       color: rgb(23, 48, 48);
+      box-shadow: 0px 10px 3px 2px #00000021;
     }
     .navBtn {
       background-color: $clr-0;

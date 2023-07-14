@@ -1,6 +1,6 @@
 @import '../../global.scss';
 
-.class {
+.course {
   width: 300px;
   border-radius: 10px;
   background-color: #fff;
@@ -51,6 +51,14 @@
       border-top-left-radius: 0px;
 
     }
+  }
+  .cat {
+    // background-color: $bodyBg;
+    color: $textColor;
+    align-self: flex-start;
+    margin-left: 1rem;
+    padding: 5px 10px;
+    border-radius: 50px;
   }
   .date-sec{
     @include flex();

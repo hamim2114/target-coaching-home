@@ -1,9 +1,9 @@
-import './Class.scss';
+import './Course.scss';
 import { FaArrowRight, FaCalendar, FaClock, FaTimes, FaTimesCircle } from 'react-icons/fa'
 
-const Class = () => {
+const Course = () => {
   return (
-    <div className="class">
+    <div className="course">
       <img src="/class1.jpg" alt="" />
       <div className="date-sec">
         <span className="day"><FaCalendar/> Mon - Fri</span>
@@ -15,4 +15,4 @@ const Class = () => {
   )
 }
 
-export default Class
+export default Course
