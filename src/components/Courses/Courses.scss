@@ -6,7 +6,9 @@
     padding: 4rem 0;
   }
   &-wrapper {
-    @include container;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
     .top {
       text-align: center;
       h1 {
