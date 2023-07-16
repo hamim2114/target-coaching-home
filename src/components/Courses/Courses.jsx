@@ -3,6 +3,7 @@ import './Courses.scss'
 import Slider from 'react-slick'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import Course from '../course/Course';
+import { Link } from 'react-router-dom';
 
 export const courseData = [
   {
@@ -10,7 +11,7 @@ export const courseData = [
     cat: 'Academic',
     day: 'Mon - Fri',
     time: '05PM - 08PM',
-    class: 'Seven',
+    class: 'Six',
     desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
   },
   {
@@ -18,19 +19,35 @@ export const courseData = [
     cat: 'Special',
     day: 'Mon - Fri',
     time: '05PM - 08PM',
-    class: 'Seven',
+    class: 'XI',
     desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
   },
   {
     img: '/class3.jpg',
+    cat: 'Academic',
+    day: 'Mon - Fri',
+    time: '05PM - 08PM',
+    class: 'Eight',
+    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
+  },
+  {
+    img: '/class1.jpg',
+    cat: 'Academic',
+    day: 'Mon - Fri',
+    time: '05PM - 08PM',
+    class: 'Nine',
+    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
+  },
+  {
+    img: '/class2.jpg',
     cat: 'Special',
     day: 'Mon - Fri',
     time: '05PM - 08PM',
-    class: 'Seven',
+    class: 'XII',
     desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
   },
   {
-    img: '/class1.jpg',
+    img: '/class3.jpg',
     cat: 'Academic',
     day: 'Mon - Fri',
     time: '05PM - 08PM',
@@ -39,30 +56,14 @@ export const courseData = [
   },
   {
     img: '/class1.jpg',
-    cat: 'Academic',
+    cat: 'Special',
     day: 'Mon - Fri',
     time: '05PM - 08PM',
-    class: 'Seven',
+    class: 'XI',
     desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
   },
   {
-    img: '/class1.jpg',
-    cat: 'Academic',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'Seven',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class1.jpg',
-    cat: 'Academic',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'Seven',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class1.jpg',
+    img: '/class2.jpg',
     cat: 'Academic',
     day: 'Mon - Fri',
     time: '05PM - 08PM',
@@ -104,7 +105,8 @@ const Courses = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: false,
         }
       }
     ]
@@ -134,7 +136,7 @@ const Courses = () => {
             }
           </Slider>
           <div className='btn'>
-            <button className='more-btn'>All Course</button>
+            <Link to='/course' className='more-btn'>All Course</Link>
             <div className="prev-next">
               <div className="s-button" onClick={previous}>
                 <IoIosArrowBack />

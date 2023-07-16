@@ -43,6 +43,7 @@
         }
         .more-btn {
           @include outline-button;
+          text-decoration: none;
         }
         .prev-next {
           display: flex;

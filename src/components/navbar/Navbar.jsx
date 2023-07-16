@@ -33,13 +33,14 @@ const Navbar = () => {
         <div className="logo">TARGET-COACHING</div>
         <ul style={{ right: `${nav ? '0' : ''}` }}>
           <Link to='/' className={`link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+          <Link to='/about' className={`link ${pathname === '/about' ? 'active' : ''}`}>About Us</Link>
           <li>Notice</li>
           <Link to='/course' className={`link ${pathname === '/course' ? 'active' : ''}`}>Course</Link>
-          <li>Teachers</li>
+          <Link to='/teachers' className={`link ${pathname === '/teachers' ? 'active' : ''}`}>Teachers</Link>
           <li>Events</li>
-          <li>Blogs</li>
+          <Link to='/blog' className={`link ${pathname === '/blog' ? 'active' : ''}`}>Blogs</Link>
           <li>Contacts</li>
-          <li>Login</li>
+          <li><b>Login</b></li>
           <button className='navBtn'>REGISTER</button>
         </ul>
         <div className="nav-menu">

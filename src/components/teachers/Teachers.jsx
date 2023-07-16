@@ -1,8 +1,9 @@
 import './Teachers.scss'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import Teacher from '../teacher/Teacher';
+import { Link } from 'react-router-dom';
 
-const tData = [
+export const tData = [
   {
     img: '/teacher1.jpg',
     name: 'Darcy Alec',
@@ -78,7 +79,7 @@ const Teachers = () => {
             }
           </div>
           <div className='btn'>
-            <button className='more-btn'>All Teachers</button>
+            <Link to='/teachers' className='more-btn'>All Teachers</Link>
           </div>
         </div>
       </div>

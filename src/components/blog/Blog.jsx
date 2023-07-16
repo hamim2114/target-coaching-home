@@ -1,10 +1,11 @@
 import { BsArrowRight } from 'react-icons/bs'
 import './Blog.scss';
+import { Link } from 'react-router-dom';
 
 const Blog = ({ blog }) => {
 
   return (
-    <div className="blog">
+    <Link to='/blog/32423te4273e' className="blog">
       <div className="blog-img">
         <img src={blog.img} alt="" />
       </div>
@@ -17,7 +18,7 @@ const Blog = ({ blog }) => {
         </div>
         <button className="more-btn link">read more<BsArrowRight /> </button>
       </div>
-    </div>
+    </Link>
   )
 }
 

@@ -37,6 +37,7 @@
   }
   .more-blog-btn {
     @include flex();
+    text-decoration: none;
     gap: 5px;
     color: $clr-1;
     font-weight: bold;

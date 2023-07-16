@@ -1,0 +1,65 @@
+@import '../../global.scss';
+
+.blog-bg-img {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -9;
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+.blog-single {
+  margin-top: 18rem;
+  .wrapper {
+    background-color: #fff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    @include mobile {
+      max-width: 350px;
+      padding: 2rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      color: $textColor;
+      text-overflow: hidde;
+      hr {
+        max-width: 500px;
+        margin-top: 5px;
+        height: 2px;
+        border: none;
+        background-color: gray;
+      }
+    }
+    .info {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 2rem;
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+      .time{
+        @include flex();
+        gap: 5px;
+      }
+    }
+    .text {
+     
+    }
+    .back-arrow {
+      margin-top: 2.5rem;
+      font-size: 17px;
+      @include flex(center, start);
+      text-decoration: none;
+      gap: 5px;
+      color: $clr-1;
+    }
+  }
+}

@@ -1,0 +1,176 @@
+@import '../../global.scss';
+
+.about-page {
+  margin: 5rem 0;
+  &-wrapper {
+    @include container;
+    @include flex();
+    flex-direction: column;
+    h1 {
+      font-size: 3rem;
+      margin-top: 5rem;
+      text-align: center;
+      color: $textColor;
+      @include mobile {
+        margin-top: 2rem;
+        font-size: 2.3rem;
+      }
+      span {
+        color: $clr-0;
+      }
+    }
+    p {
+      color: $textColor;
+      margin-bottom: 5rem;
+      max-width: 600px;
+      text-align: center;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 50px;
+      margin-bottom: 10rem;
+      @include tablet {
+        margin-bottom: 7rem;
+        flex-direction: column;
+      }
+      .gallery {
+        width: 100%;
+        flex: 1;
+      }
+      .info {
+        flex: 1;
+        h2 {
+          font-size: 2.8rem;
+          font-weight: 500;
+          line-height: 50px;
+          color: $textColor;
+          @include mobile {
+            font-size: 2.4rem;
+            margin-top: 3rem;
+            line-height: 40px;
+          }
+          span {
+            color: $clr-0;
+          }
+        }
+        .desc {
+          color: $textColor;
+          padding: 2rem 0;
+        }
+        .list {
+          color: $textColor;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          svg {
+            color: $clr-0;
+          }
+        }
+        .explore-course-btn {
+          background-color: $clr-0;
+          padding: 10px 40px;
+          margin-top: 1rem;
+          font-size: 16px;
+          border-radius: 50px;
+          &:hover {
+            opacity: 0.8;
+          }
+          .link {
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .middle {
+      @include flex();
+      flex-direction: column;
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $clr-1;
+      }
+      h2 {
+        font-size: 2.8rem;
+        font-weight: 500;
+        line-height: 50px;
+        color: $textColor;
+        text-align: center;
+        margin-bottom: 1rem;
+        @include mobile {
+          font-size: 2.4rem;
+          line-height: 40px;
+        }
+        span {
+          color: $clr-0;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
+      .info1 {
+        @include flex();
+        gap: 5rem;
+        margin-bottom: 5rem;
+        @include mobile {
+          flex-direction: column;
+          gap: 2rem;
+        }
+        .left {
+          flex: 1.2;
+          h4 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: $textColor;
+            @include mobile {
+              text-align: center;
+            }
+          }
+          .left-desc {
+            text-align: start;
+            font-size: 13px;
+          }
+        }
+        .right {
+          flex: 1;
+          img {
+            border-radius: 20px;
+          }
+        }
+      }
+      .info2 {
+        @include flex();
+        gap: 5rem;
+        @include mobile {
+         flex-direction: column-reverse;
+          gap: 2rem;
+        }
+        .left {
+          flex: 1;
+          img {
+            border-radius: 20px;
+          }
+        }
+        .right {
+          flex: 1.2;
+          h4 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: $textColor;
+            @include mobile {
+              text-align: center;
+            }
+          }
+          .right-desc {
+            text-align: start;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .bottom {
+    }
+  }
+}
