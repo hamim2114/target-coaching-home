@@ -12,6 +12,11 @@ import SingleCoursePage from './pages/singleCoursePage/SingleCoursePage';
 import { useEffect } from 'react';
 import SingleBlogPage from './pages/singleblogPage/SingleBlogPage';
 import AboutPage from './pages/aboutPage/AboutPage';
+import EventPage from './pages/eventPage/EventPage';
+import SingleEventPage from './pages/singleEventPage/SingleEventPage';
+import NoticePage from './pages/noticePage/NoticePage';
+import SingleNoticePage from './pages/singleNoticePage/SingleNoticePage';
+import ContactPage from './pages/contactPage/ContactPage';
 
 function App() {
 
@@ -25,7 +30,7 @@ function App() {
 
   const Layout = () => {
     return (
-      <div className='app'>
+      <div>
         <ScrollToTop/>
         <Navbar />
         <Outlet />
@@ -33,7 +38,7 @@ function App() {
       </div>
     )
   };
-  
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -48,6 +53,14 @@ function App() {
           element: <AboutPage />
         },
         {
+          path: 'notice',
+          element: <NoticePage />
+        },
+        {
+          path: 'notice/:id',
+          element: <SingleNoticePage />
+        },
+        {
           path: 'course',
           element: <CoursePage />
         },
@@ -60,12 +73,24 @@ function App() {
           element: <TeachersPage />
         },
         {
+          path: 'event',
+          element: <EventPage />
+        },
+        {
+          path: 'event/:id',
+          element: <SingleEventPage />
+        },
+        {
           path: 'blog',
           element: <BlogPage />
         },
         {
           path: 'blog/:id',
           element: <SingleBlogPage />
+        },
+        {
+          path: 'contact',
+          element: <ContactPage />
         },
       ]
     }

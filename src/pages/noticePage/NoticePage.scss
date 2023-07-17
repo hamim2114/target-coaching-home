@@ -1,0 +1,86 @@
+@import '../../global.scss';
+
+.notice {
+  margin: 5rem 0;
+  &-wrapper {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: $textColor;
+      font-size: 3rem;
+      margin-top: 5rem;
+      @include mobile {
+        margin-top: 3rem;
+        font-size: 2.3rem;
+      }
+      span {
+        color: $clr-0;
+      }
+    }
+    p {
+      color: $textColor;
+      max-width: 600px;
+      text-align: center;
+    }
+    .notice-list {
+      margin-top: 5rem;
+      width: 70%;
+      @include mobile {
+       width: 100%;
+      }
+      .notice-single {
+        @include flex(center, space-between);
+        gap: 70px;
+        margin-bottom: 3rem;
+        background-color: #fff;
+        padding: 40px 20px;
+        border-top: 4px solid $clr-0;
+        @include shadow;
+        @include tablet {
+          flex-direction: column;
+          padding: 20px 10px;
+          gap: 20px;
+        }
+        .info-main{
+          @include flex();
+          gap: 20px;
+          @include mobile {
+            gap: 10px;
+            flex-direction: column;
+            text-align: center;
+          }
+          .warn {
+            font-size: 6rem;
+            color: $clr-0;
+          }
+          .info{
+            h2{
+              color: $textColor;
+            }
+            .date{
+              color: $textColor;
+              margin-bottom: 1rem;
+            }
+            .desc{
+              // font-size: 13px;
+            }
+          }
+        }
+        .link-btn {
+          background-color: $clr-0;
+          padding: 10px 40px;
+          color: #fff;
+          transition: 0.5s;
+          border-radius: 5px;
+          text-decoration: none;
+          @include mobile {
+            align-self: center;
+            margin: 0 10px 10px;
+          }
+        }
+      }
+    }
+  }
+}

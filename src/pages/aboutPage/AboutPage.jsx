@@ -40,7 +40,6 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="middle">
-          <h3>Who we are</h3>
           <h2>A <span>journey</span> of passion and <br /> <span>dedication</span> </h2>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown</p>
           <div className="info1">

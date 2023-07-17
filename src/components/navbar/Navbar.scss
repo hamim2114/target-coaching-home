@@ -50,10 +50,6 @@
       &:hover{
         color: $clr-0;
       }
-      &:nth-child(8) {
-        color: $clr-0;
-        font-weight: bold;
-      }
       &.active {
         color: $clr-0;
         // transform: translateY(-5px);

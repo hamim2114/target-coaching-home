@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Course.scss';
-import { FaArrowRight, FaCalendar, FaClock, FaTimes, FaTimesCircle } from 'react-icons/fa'
+import { FaArrowRight, FaCalendar, FaClock } from 'react-icons/fa'
 
 const Course = ({data}) => {
   
