@@ -6,7 +6,7 @@ const EventPage = () => {
   return (
     <div className="event">
       <div className="event-wrapper">
-        <h1>Upcomming <span>Events</span></h1>
+        <h1>Upcoming <span>Events</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, inventore temporibus excepturi ex ea quae!</p>
         <div className="event-list">
           <div className="event-single">
