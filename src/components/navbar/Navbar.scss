@@ -33,6 +33,8 @@
   .logo {
     font-size: 2rem;
     font-weight: bold;
+    text-decoration: none;
+    color: $clr-0;
     @include tablet{
       font-size: 1.5rem;
 
@@ -74,8 +76,8 @@
     .navBtn {
       background-color: $clr-0;
       color: #fff;
-      padding: 10px 20px;
-      border-radius: 20px;
+      padding: 5px 20px;
+      border-radius: 50px;
       text-decoration: none;
     }
   }

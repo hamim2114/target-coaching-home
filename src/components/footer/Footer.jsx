@@ -2,6 +2,7 @@ import React from 'react';
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import { BsFacebook, BsYoutube, BsTwitter, BsLinkedin } from 'react-icons/bs';
 import './Footer.scss';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -19,11 +20,12 @@ const Footer = () => {
         <div className="footer-section">
           <div className="footer-links">
             <h3 className="footer-heading">QUICK LINK</h3>
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Course</a>
-            <a href="">Admission</a>
-            <a href="">Terms & Conditions</a>
+            <Link to='/' href="">Return Home</Link>
+            <Link to='/about' href="">About Us</Link>
+            <Link to='/notice' href="">Notice For Student</Link>
+            <Link to='/course' href="">Course List</Link>
+            <Link to='/blog' href="">Blog Page</Link>
+            <Link to='/contact' href="">Contact Us</Link>
           </div>
         </div>
       </div>
