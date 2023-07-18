@@ -9,7 +9,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
 
   const { pathname } = useLocation();
-  
+
   const prevScroll = useRef(0);
   const navbarRef = useRef(null);
 
@@ -44,7 +44,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav ref={navbarRef} className={`nav-main ${scroll > 100 || pathname !== '/' ? 'active' : ''} ${scrollup ? '' : 'scrollup' } `}>
+    <nav ref={navbarRef} className={`nav-main ${scroll > 100 || pathname !== '/' ? 'active' : ''} ${scrollup ? '' : 'scrollup'} `}>
       <div style={{ color: `${scroll > 500 || pathname !== '/' ? '#494949' : ''}` }} className='navbar'>
         <div className="logo">TARGET-COACHING</div>
         <ul style={{ right: `${nav ? '0' : ''}` }}>
@@ -56,8 +56,8 @@ const Navbar = () => {
           <Link to='/event' className={`link ${pathname === '/event' ? 'active' : ''}`} onClick={() => setNav(false)}>Event</Link>
           <Link to='/blog' className={`link ${pathname === '/blog' ? 'active' : ''}`} onClick={() => setNav(false)}>Blogs</Link>
           <Link to='/contact' className={`link ${pathname === '/contact' ? 'active' : ''}`} onClick={() => setNav(false)}>Contact</Link>
-          <li><b>Login</b></li>
-          <button className='navBtn'>REGISTER</button>
+          <Link to='/login' className={`link  ${pathname === '/login' ? 'active' : ''}`} onClick={() => setNav(false)}>Login</Link>
+          <Link to='/register' className='navBtn' onClick={() => setNav(false)}>Register</Link>
         </ul>
         <div className="nav-menu">
           <div className={`nav-line ${nav && 'active'}`} onClick={() => setNav(p => !p)}>

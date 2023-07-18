@@ -1,0 +1,9 @@
+@import '../../global.scss';
+
+.login-page {
+  // margin: 5rem 0;
+  .wrapper {
+    @include container;
+    // margin-top: 10rem;
+  }
+}

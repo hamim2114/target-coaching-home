@@ -17,6 +17,8 @@ import SingleEventPage from './pages/singleEventPage/SingleEventPage';
 import NoticePage from './pages/noticePage/NoticePage';
 import SingleNoticePage from './pages/singleNoticePage/SingleNoticePage';
 import ContactPage from './pages/contactPage/ContactPage';
+import LoginPage from './pages/loginPage/LoginPage';
+import SignUp from './pages/signUp/SignUp';
 
 function App() {
 
@@ -91,6 +93,14 @@ function App() {
         {
           path: 'contact',
           element: <ContactPage />
+        },
+        {
+          path: 'login',
+          element: <LoginPage />
+        },
+        {
+          path: 'register',
+          element: <SignUp />
         },
       ]
     }

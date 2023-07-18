@@ -11,8 +11,6 @@ const ContactPage = () => {
         <h1>Get In Touch <span>With us</span> </h1>
         <div className="contact-main">
           <div className="left">
-            {/* <h1>Get In Touch With us</h1> */}
-            {/* <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p> */}
             <div className="contact">
               <div className="contact-sec">
                 <div className="icon"><IoLocationSharp /></div>

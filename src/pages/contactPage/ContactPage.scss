@@ -76,7 +76,8 @@
             padding: 15px 20px;
             outline: none;
             border: 0.5px solid rgb(204, 204, 204);
-            background-color: #f3f3f3;
+            border-radius: 5px;
+            background-color: transparent;
             width: 100%;
             &:focus {
               border: 0.5px solid $clr-0;
@@ -98,6 +99,7 @@
           }
           button {
             background-color: $clr-0;
+            border-radius: 5px;
             color: #fff;
             padding: 14px 18px;
             font-size: 15px;

@@ -45,7 +45,6 @@ const EventPage = () => {
             </div>
             <Link to='/event/42r4we' className='link-btn'>Details</Link>
           </div>
-          
         </div>
       </div>
     </div>
