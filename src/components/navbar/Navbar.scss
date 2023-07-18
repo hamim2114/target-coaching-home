@@ -28,7 +28,6 @@
   padding: 16px 1rem;
   width: 100%;
   color: #fff;
- 
   // transition: .5s ease;
   @include flex(center, space-between);
   .logo {
@@ -59,7 +58,7 @@
     @include tablet {
       flex-direction: column;
       position: absolute;
-      top: 4.3rem;
+      top: 4rem;
       right: -300px;
       height: 100vh;
       padding-right: 6rem;
