@@ -67,9 +67,11 @@
     color: $textColor;
   }
   .desc {
+    padding: 0 1rem;
     color: $textColor;
     font-size: 14px;
     line-height: 16px;
+    height: 80px;
     text-align: center;
   }
   .details{

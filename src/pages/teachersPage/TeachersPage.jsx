@@ -1,8 +1,15 @@
 import './TeachersPage.scss';
+import { useQuery } from '@tanstack/react-query'
 import Teacher from '../../components/teacher/Teacher'
 import { tData } from '../../components/teachers/Teachers'
+import { axiosReq } from '../../utils/axiosReq';
 
 const TeachersPage = () => {
+  const { isLoading, error, data: team } = useQuery({
+    queryKey: ['team'],
+    queryFn: () => axiosReq.get('/team').then(res => res.data)
+  });
+  
   return (
     <div className="teachers-page">
       <div className="teachers-page-wrapper">
@@ -13,7 +20,9 @@ const TeachersPage = () => {
         <div className="bottom">
           <div className="teacher-sec">
             {
-              tData.map((teacher, index) => (
+              isLoading ? 'Loading..' : error ? 'Something went wrong!' :
+              team.length === 0 ? <h2 style={{ padding: '5rem', color: 'gray' }}>Teacher Empty.</h2> :
+              team.map((teacher, index) => (
                 <Teacher key={index} teacher={teacher} />
               ))
             }

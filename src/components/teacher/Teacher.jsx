@@ -9,6 +9,7 @@ import CallIcon from '@mui/icons-material/Call';
 
 
 const Teacher = ({teacher}) => {
+  console.log(teacher)
   return (
     <div className="teacher">
       <div className="up">
@@ -19,9 +20,9 @@ const Teacher = ({teacher}) => {
         <div className="title">{teacher.title}</div>
         <div className="arrow"><IoIosArrowDown/></div>
         <div className="social">
-          <a to={`mailto:`} className='social-icon link'><EmailIcon/></a>
-          <a href={``} target='_blank' rel="noopener noreferrer" className='social-icon link'><FacebookIcon/></a>
-          <a to={`tel:`} className='social-icon link'><CallIcon/></a>
+          <a href={`mailto: ${teacher.email}`} className='social-icon link'><EmailIcon/></a>
+          <a href={`tel: ${teacher.phone}`} className='social-icon link'><CallIcon/></a>
+          <a href={`https://${teacher.facebook}`} target='_blank' rel="noopener noreferrer" className='social-icon link'><FacebookIcon/></a>
         </div>
       </div>
     </div>
