@@ -2,7 +2,7 @@ import './BlogPage.scss';
 import Blog from '../../components/blog/Blog'
 import CircularProgress from '@mui/material/CircularProgress';
 import { useQuery } from '@tanstack/react-query'
-import { axiosReq } from '../../../../admin/src/utils/axiosReq';
+import { axiosReq } from '../../utils/axiosReq';
 
 const BlogPage = () => {
   const { isLoading, error, data: blogData } = useQuery({
