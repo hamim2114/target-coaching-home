@@ -3,8 +3,8 @@ import Blog from '../blog/Blog'
 import { BsArrowRight } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { axiosReq } from '../../../../admin/src/utils/axiosReq'
 import { CircularProgress } from '@mui/material'
+import { axiosReq } from '../../utils/axiosReq'
 
 const Blogs = () => {
   const { isLoading, error, data: blogData } = useQuery({
