@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import Course from '../../components/course/Course';
 import './CoursePage.scss';
 import { axiosReq } from '../../utils/axiosReq';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const CoursePage = () => {

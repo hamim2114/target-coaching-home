@@ -22,7 +22,7 @@ const SingleCoursePage = () => {
   return (
     <>
       <div className="course-bg-img">
-        <img src={data?.img || '/coursebg.jpg'} alt="" />
+        <img src='/coursebg.jpg' alt="" />
       </div>
       {
          isLoading ? <CircularProgress /> : error ? 'Something went wrong!' :

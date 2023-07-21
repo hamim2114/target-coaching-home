@@ -1,16 +1,25 @@
 import './BlogPage.scss';
-import { blogData } from '../../components/blogs/Blogs'
 import Blog from '../../components/blog/Blog'
-import { BsArrowRight } from 'react-icons/bs'
+import CircularProgress from '@mui/material/CircularProgress';
+import { useQuery } from '@tanstack/react-query'
+import { axiosReq } from '../../../../admin/src/utils/axiosReq';
 
 const BlogPage = () => {
+  const { isLoading, error, data: blogData } = useQuery({
+    queryKey: ['blog'],
+    queryFn: () => axiosReq.get('/blog').then(res => res.data)
+  });
+
   return (
     <div className="blog-page">
       <div className="blog-page-wrapper">
-        <h1>From Our <span>Blog</span></h1>
+        <h1>Our <span>Blog</span></h1>
         <p>Application programming interface voice-over (vo) instructor led training br curation, user created content</p>
         <div className="blog-data">
-          {blogData.map((blog, index) => (
+          {
+          isLoading ? <CircularProgress /> : error ? 'Something went wrong!' :
+          blogData.length === 0 ? <h2 style={{ padding: '5rem', color: 'gray' }}>Blog Empty.</h2> :
+          blogData.map((blog, index) => (
             <Blog blog={blog} key={index} />
           ))}
         </div>

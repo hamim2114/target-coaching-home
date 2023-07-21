@@ -2,77 +2,17 @@ import { useRef } from 'react';
 import './Courses.scss'
 import Slider from 'react-slick'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
+import { useQuery } from '@tanstack/react-query';
 import Course from '../course/Course';
 import { Link } from 'react-router-dom';
-
-export const courseData = [
-  {
-    img: '/class1.jpg',
-    cat: 'Academic',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'Six',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class2.jpg',
-    cat: 'Special',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'XI',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class3.jpg',
-    cat: 'Academic',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'Eight',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class1.jpg',
-    cat: 'Academic',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'Nine',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class2.jpg',
-    cat: 'Special',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'XII',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class3.jpg',
-    cat: 'Academic',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'Seven',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class1.jpg',
-    cat: 'Special',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'XI',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-  {
-    img: '/class2.jpg',
-    cat: 'Academic',
-    day: 'Mon - Fri',
-    time: '05PM - 08PM',
-    class: 'Seven',
-    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam harum alias eaque eum.'
-  },
-]
+import { axiosReq } from '../../utils/axiosReq';
 
 const Courses = () => {
+  const { isLoading, error, data: course } = useQuery({
+    queryKey: ['course'],
+    queryFn: () => axiosReq.get('/course').then(res => res.data)
+  });
+
   const settings = {
     infinite: true,
     speed: 1000,
@@ -130,7 +70,7 @@ const Courses = () => {
         <div className="bottom">
           <Slider ref={sliderRef} {...settings}>
             {
-              courseData.map((data,i) => (
+              course && course.map((data,i) => (
                 <Course data={data} key={i}/>
               ))
             }

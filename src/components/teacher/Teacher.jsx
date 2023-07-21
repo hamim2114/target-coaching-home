@@ -13,7 +13,7 @@ const Teacher = ({teacher}) => {
   return (
     <div className="teacher">
       <div className="up">
-        <img src={teacher.img} alt="team" />
+        <img src={teacher.img || '/noavatar.png'} alt="team" />
       </div>
       <div className="down">
         <div className="name">{teacher.name}</div>
