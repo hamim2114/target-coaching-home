@@ -39,22 +39,22 @@ const Navbar = () => {
   }, []);
 
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScroll = window.pageYOffset;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
 
-  //     if (currentScroll > prevScroll.current) {
-  //       setScrollup(false);
-  //     } else if (currentScroll < prevScroll.current) {
-  //       setScrollup(true);
-  //     }
-  //     setScroll(currentScroll)
-  //     prevScroll.current = currentScroll;
-  //   };
+      if (currentScroll > prevScroll.current) {
+        setScrollup(false);
+      } else if (currentScroll < prevScroll.current) {
+        setScrollup(true);
+      }
+      setScroll(currentScroll)
+      prevScroll.current = currentScroll;
+    };
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <nav ref={navbarRef} className={`nav-main ${scroll > 100 || pathname !== '/' ? 'active' : ''} ${scrollup ? '' : 'scrollup'} `}>
