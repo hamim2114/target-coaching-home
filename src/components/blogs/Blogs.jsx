@@ -1,4 +1,5 @@
 import './Blogs.scss'
+import React from 'react'
 import Blog from '../blog/Blog'
 import { BsArrowRight } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
@@ -28,4 +29,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default React.memo(Blogs)

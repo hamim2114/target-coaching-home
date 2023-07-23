@@ -123,6 +123,28 @@
 }
 .nav-menu {
   display: none;
+  .warn{
+    background-color: #fff;
+    width: 10px;
+    @include flex();
+    position: absolute;
+    color: $clr-0;
+    top: 10px;
+    border-radius: 5px;
+    right: 10px;
+    animation: blink 1s infinite;
+    @keyframes blink {
+      0% {
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0;
+      }
+    }
+  }
   .nav-line{
     width: 32px;
     height: 26px;
@@ -141,13 +163,16 @@
     &.active{
       span{
         &:nth-child(1){
-          transform: rotate(45deg);
+          // transform: rotate(45deg);
+          transform: translateX(5px);
         }
         &:nth-child(2){
-          opacity: 0;
+          // opacity: 0;
+          transform: translateX(-5px);
         }
         &:nth-child(3){
-          transform: rotate(-45deg);
+          // transform: rotate(-45deg);
+          transform: translateX(5px);
         }
       }
     }

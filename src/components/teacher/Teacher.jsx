@@ -1,4 +1,5 @@
 import './Teacher.scss';
+import React from 'react'
 import { FaArrowRight,FaFacebook,  FaMailchimp, FaPhone } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import {IoIosArrowDown} from 'react-icons/io';
@@ -29,4 +30,4 @@ const Teacher = ({teacher}) => {
   )
 }
 
-export default Teacher
+export default React.memo(Teacher)

@@ -1,3 +1,4 @@
+import React from 'react';
 import { BsArrowRight } from 'react-icons/bs'
 import './Blog.scss';
 import { Link } from 'react-router-dom';
@@ -23,4 +24,4 @@ const Blog = ({ blog }) => {
   )
 }
 
-export default Blog
+export default React.memo(Blog);

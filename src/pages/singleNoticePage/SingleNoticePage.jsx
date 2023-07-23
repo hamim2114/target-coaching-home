@@ -23,7 +23,7 @@ const SingleNoticePage = () => {
     <div className="notice-single-page">
       {
         isLoading ? <CircularProgress sx={{ m: '15rem' }} /> : error ? 'Something went wrong!' :
-          !data ? <h2 style={{ padding: '35rem', color: 'gray' }}>Notice Empty.</h2> :
+          !data ? <h2 style={{ padding: '15rem', color: 'gray' }}>Notice Empty.</h2> :
             <div className="notice-single-page-wrapper">
               <div className='top-title'>{data.title}</div>
               <div className="notice-img">

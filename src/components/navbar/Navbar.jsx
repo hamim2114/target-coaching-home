@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
+import React from 'react';
 import './Navbar.scss'
 import { Link, useLocation } from 'react-router-dom';
 import { useRef } from 'react';
 import { axiosReq } from '../../utils/axiosReq';
 import { useQuery } from '@tanstack/react-query';
+import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(0);
@@ -62,20 +64,21 @@ const Navbar = () => {
           <Link to='/' className={`link ${pathname === '/' ? 'active' : ''}`} onClick={() => setNav(false)}>Home</Link>
           <Link to='/about' className={`link ${pathname === '/about' ? 'active' : ''}`} onClick={() => setNav(false)}>About Us</Link>
           <Link to='/notice' className={`link ${pathname === '/notice' ? 'active' : ''}`} onClick={() => setNav(false)}>
-            Notice {notice && <span>({notice.length})</span>}
+            Notice {notice?.length ? <span>({notice.length})</span> :''}
           </Link>
           <Link to='/course' className={`link ${pathname === '/course' ? 'active' : ''}`} onClick={() => setNav(false)}>Course</Link>
           <Link to='/teachers' className={`link ${pathname === '/teachers' ? 'active' : ''}`} onClick={() => setNav(false)}>Teachers</Link>
           <Link to='/event' className={`link ${pathname === '/event' ? 'active' : ''}`} onClick={() => setNav(false)}>
-            Event {event && <span>({event.length})</span>}
+            Event {event?.length ? <span>({event.length})</span> : ''}
           </Link>
           <Link to='/blog' className={`link ${pathname === '/blog' ? 'active' : ''}`} onClick={() => setNav(false)}>Blogs</Link>
           <Link to='/contact' className={`link ${pathname === '/contact' ? 'active' : ''}`} onClick={() => setNav(false)}>Contact</Link>
           <Link to='/login' className={`link  ${pathname === '/login' ? 'active' : ''}`} onClick={() => setNav(false)}><b>Login</b></Link>
           <Link to='/register' className='navBtn' onClick={() => setNav(false)}>Register</Link>
         </ul>
-        <div className="nav-menu">
-          <div className={`nav-line ${nav && 'active'}`} onClick={() => setNav(p => !p)}>
+        <div className="nav-menu"  onClick={() => setNav(p => !p)}>
+          {notice?.length || event?.length ? <div className="warn" style={{display: nav ? 'none': ''}}><PriorityHighIcon/></div> : ''}
+          <div className={`nav-line ${nav && 'active'}`}>
             <span ></span>
             <span ></span>
             <span ></span>
@@ -86,4 +89,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default React.memo(Navbar);

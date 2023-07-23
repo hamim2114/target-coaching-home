@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
 import './Course.scss';
 import parser from 'html-react-parser';
 import { FaArrowRight, FaCalendar, FaClock } from 'react-icons/fa'
@@ -20,4 +21,4 @@ const Course = ({data}) => {
   )
 }
 
-export default Course
+export default React.memo(Course);

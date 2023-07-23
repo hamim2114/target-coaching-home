@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { axiosReq } from '../../utils/axiosReq';
 import { useQuery } from '@tanstack/react-query';
 import { CircularProgress } from '@mui/material';
+import React from 'react';
 
 
 const Teachers = () => {
@@ -38,4 +39,4 @@ const Teachers = () => {
   )
 }
 
-export default Teachers
+export default React.memo(Teachers)
