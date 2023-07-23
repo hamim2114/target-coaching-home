@@ -4,10 +4,7 @@ const Loader = ({animateExit}) => {
   return (
     <div className="loader">
       <div className={`loader-container ${animateExit ? 'active' : ''}`}>
-        <h2>WELCOME TO <br /> TARGET COACHING</h2>
-        <div className="loader-img">
-        <img src="/loader.svg" alt="" />
-        </div>
+         <h2>TCH</h2>
       </div>
     </div>
   )

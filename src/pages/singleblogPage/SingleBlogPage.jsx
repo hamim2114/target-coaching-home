@@ -19,15 +19,15 @@ const SingleBlogPage = () => {
     month: 'long',
     year: 'numeric',
   });
-  
+
   return (
     <>
       <div className="blog-bg-img">
         <img src='/blogbg.jpg'alt="" />
       </div>
       {
-        isLoading ? <CircularProgress /> : error ? 'Something went wrong!' :
-        !data ? <h2 style={{ padding: '35rem', color: 'gray' }}>Blog Empty.</h2> :
+        isLoading ? <CircularProgress sx={{m: '10rem'}}/> : error ? 'Something went wrong!' :
+        !data ? <h2 style={{ padding: '15rem', color: 'gray' }}>Blog Not Found!</h2> :
         <div className="blog-single">
         <div className="wrapper">
           <h1>{data.title}<hr /></h1>

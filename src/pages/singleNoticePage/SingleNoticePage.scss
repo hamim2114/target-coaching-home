@@ -26,17 +26,6 @@
         object-fit: cover;
       }
     }
-    h1 {
-      margin-bottom: 1rem;
-      color: $textColor;
-      hr {
-        max-width: 500px;
-        margin-top: 5px;
-        height: 2px;
-        border: none;
-        background-color: gray;
-      }
-    }
     .info {
       display: flex;
       gap: 20px;
@@ -49,6 +38,10 @@
       .time {
         @include flex();
         gap: 5px;
+        color: $textColor;
+        svg{
+          color: $clr-0;
+        }
       }
     }
     .text {

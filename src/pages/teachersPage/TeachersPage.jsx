@@ -1,7 +1,6 @@
 import './TeachersPage.scss';
 import { useQuery } from '@tanstack/react-query'
 import Teacher from '../../components/teacher/Teacher'
-import { tData } from '../../components/teachers/Teachers'
 import { axiosReq } from '../../utils/axiosReq';
 
 const TeachersPage = () => {

@@ -70,6 +70,9 @@
               }
             }
             .info {
+              display: flex;
+              align-items: center;
+              gap: 5px;
               color: $textColor;
               margin-bottom: 5px;
               svg {
