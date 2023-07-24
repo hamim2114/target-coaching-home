@@ -22,12 +22,13 @@
     .up{
       img{
         filter: grayscale(1.2);
-        transform: scale(1.1);
+        // transform: scale(1.1);
       }
     }
   }
   .up{
     overflow: hidden;
+    border: .5px solid rgb(207, 207, 207);
     img{
       transition: .5s;
       width: 100%;
@@ -48,12 +49,12 @@
     transform: translateY(55px); 
     background-color: white;
     transition: .3s ease-in-out;
+    border-top: .5px solid rgb(207, 207, 207);
     @include mobile {
       transform: translateY(40px); 
       height: 100px;
     }
     .name{
-      // @include font-play-fair;
       font-size: 2rem;
       margin-top: 10px;
       @include mobile {

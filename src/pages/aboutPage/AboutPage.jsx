@@ -5,10 +5,17 @@ import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import CoreStyles from 'react-awesome-slider/src/core/styles.scss';
 import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/fold-out-animation.scss';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import { axiosReq } from '../../utils/axiosReq';
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const AboutPage = () => {
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['gallery'],
+    queryFn: () => axiosReq.get('/gallery').then(res => res.data)
+  });
+console.log(data)
   return (
     <div className="about-page">
       <div className="about-page-wrapper">
@@ -16,18 +23,22 @@ const AboutPage = () => {
         <p>Application programming interface voice-over (vo) instructor led training br curation, user created content</p>
         <div className="top">
           <div className="gallery">
-            <AutoplaySlider
+            {
+              data &&
+              <AutoplaySlider
               animation="foldOutAnimation"
               cssModule={[CoreStyles, AnimationStyles]}
               play={true}
               cancelOnInteraction={false}
               interval={3000}
             >
-              <div data-src="/class1.jpg" />
-              <div data-src="/class2.jpg" />
-              <div data-src="/class3.jpg" />
-              <div data-src="/class1.jpg" />
+              {
+                data?.map(i => (
+                  <div key={i} data-src={i?.image} />
+                ))
+              }
             </AutoplaySlider>
+            }
           </div>
           <div className="info">
             <h2>Expertise <span>unparalleled</span>  in education</h2>

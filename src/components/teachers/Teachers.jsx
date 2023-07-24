@@ -39,4 +39,4 @@ const Teachers = () => {
   )
 }
 
-export default React.memo(Teachers)
+export default Teachers;

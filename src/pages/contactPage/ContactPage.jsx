@@ -57,7 +57,7 @@ const ContactPage = () => {
             height="450"
             style={{ border: '0' }}
             allowfullscreen=""
-            loading="lazy"
+            // loading="lazy"
           ></iframe>
         </div>
       </div>

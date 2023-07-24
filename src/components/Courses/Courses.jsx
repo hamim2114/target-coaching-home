@@ -1,4 +1,4 @@
-import { memo, useRef } from 'react';
+import { useRef } from 'react';
 import './Courses.scss'
 import Slider from 'react-slick'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
@@ -97,4 +97,4 @@ const Courses = () => {
   )
 }
 
-export default memo(Courses)
+export default Courses;

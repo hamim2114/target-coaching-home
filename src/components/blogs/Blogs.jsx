@@ -29,4 +29,4 @@ const Blogs = () => {
   )
 }
 
-export default React.memo(Blogs)
+export default Blogs;

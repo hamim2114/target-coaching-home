@@ -10,7 +10,7 @@ import CallIcon from '@mui/icons-material/Call';
 
 
 const Teacher = ({teacher}) => {
-  console.log(teacher)
+
   return (
     <div className="teacher">
       <div className="up">
