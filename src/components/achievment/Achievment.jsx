@@ -22,10 +22,7 @@ const Achievment = () => {
           quaerat cupiditate dicta. <br /> veritatis qui omnis totam laboriosam
           harum magnam, ex quaerat cupiditate
         </p>
-
-        <div
-          className="grid-wrapper"
-        >
+        <div className="grid-wrapper">
           <div className="achievement-item">
             <FaGraduationCap className="icon" />
             <div className="count-wrapper">

@@ -3,13 +3,13 @@ import { FaChalkboardTeacher } from 'react-icons/fa'
 import { TbCertificate } from 'react-icons/tb'
 
 const WelcomeSec = () => {
+
   return (
     <>
-     
       <div className='welcomeSecMain'>
 
         <div className='welcome-sec'>
-          <h1>Welcome to <span>Target Coaching Home</span></h1>
+          <h1>Welcome to <br /> <span>Target Coaching Home</span></h1>
           <p>Ecosystem blended learning off-the-shelf learning storytelling explainer animation completion criteria.</p>
           <div className="welcome-sec-features">
             <div className='features-box'>

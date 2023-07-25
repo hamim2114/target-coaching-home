@@ -1,7 +1,11 @@
 import './HeroSection.scss'
 import { Typewriter } from 'react-simple-typewriter'
+import { useEffect } from 'react';
 
 const HeroSection = () => {
+useEffect(() => {
+  
+}, [])
 
   return (
     <main>
@@ -32,7 +36,7 @@ const HeroSection = () => {
               cursorBlinking={true}
             />
           </div>
-          {/* <h1>Providing Best Education For Brighter future</h1> */}
+          
           <h1>Providing Best Education  For Brighter <span className='type-animation animating'>Future..</span> </h1>
           <p>Per sed, mattis. Integer viverra euismod maecenas incidunt, phasellus consequatur aliquam nihil temporibus in assumens deserunt convallis. Inceptos per consectetur consequatur proin.Integer viverra euismod maecenas incidunt, phasellus consequatur aliquam nihil temporibus in assumens deserunt convallis. Inceptos per consectetur consequatur</p>
           <button className='heroBtn'>Learn More</button>

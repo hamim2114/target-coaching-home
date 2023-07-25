@@ -15,7 +15,7 @@ const AboutPage = () => {
     queryKey: ['gallery'],
     queryFn: () => axiosReq.get('/gallery').then(res => res.data)
   });
-console.log(data)
+
   return (
     <div className="about-page">
       <div className="about-page-wrapper">

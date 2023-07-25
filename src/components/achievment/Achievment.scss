@@ -2,10 +2,10 @@
 
 .achievment-section {
   width: 100%;
-  background-image: url('/achivebg.jpg');
+  background-image: url('/eventsm.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-size: cover;
   height: 400px;
   position: relative;
@@ -16,7 +16,7 @@
   &::before {
     position: absolute;
     content: '';
-    background-color: #ffffff9f;
+    background-color: #ffffffcc;
     width: 100%;
     height: 100%;
     z-index: -1;
