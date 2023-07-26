@@ -2,8 +2,8 @@ import Navbar from './components/navbar/Navbar'
 import './App.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Suspense, lazy, useEffect } from 'react';
-import { Outlet, RouterProvider, createBrowserRouter, useLocation } from 'react-router-dom';
+import React, { Suspense, lazy, useEffect } from 'react';
+import { Outlet, RouterProvider, createBrowserRouter, useLocation, useOutlet } from 'react-router-dom';
 const HomePage = lazy(() => import('./pages/homePage/HomePage'));
 const CoursePage = lazy(() => import('./pages/coursePage/CoursePage'));
 const TeachersPage = lazy(() => import('./pages/teachersPage/TeachersPage'));
@@ -20,23 +20,38 @@ import LoginPage from './pages/loginPage/LoginPage';
 import SignUp from './pages/signUp/SignUp';
 import Footer from './components/footer/Footer';
 import Loader from './components/loader/Loader';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
 
   const ScrollToTop = () => {
-    const {pathname} = useLocation();
+    const { pathname } = useLocation();
     useEffect(() => {
-      window.scrollTo(0,0)
+      window.scrollTo(0, 0)
     }, [pathname]);
     return null;
   }
-
   const Layout = () => {
+    const { pathname } = useLocation();
+    const element = useOutlet();
     return (
       <div>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Navbar />
-        <Suspense fallback={<Loader/>}><Outlet /></Suspense> 
+        <Suspense fallback={<Loader />}>
+          {/* <Outlet/> */}
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={pathname}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 100, opacity: 0 }}
+            >
+              {element && React.cloneElement(element, { key: pathname })}
+            </motion.div>
+          </AnimatePresence>
+        </Suspense>
         <Footer />
       </div>
     )

@@ -7,6 +7,17 @@
   font-family: 'Roboto', sans-serif;
   background-color: $bodyBg;
   font-size: 15px;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $clr-0;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
 }
 *,
 *::after,
