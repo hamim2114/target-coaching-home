@@ -3,6 +3,7 @@ import { FaAward, FaGraduationCap } from "react-icons/fa";
 import { BsBookHalf } from "react-icons/bs";
 import { RiAwardFill } from "react-icons/ri";
 import CountUp from "react-countup";
+import ScroolTrigger from "react-scroll-trigger";
 import { motion } from 'framer-motion'
 import "./Achievment.scss";
 
