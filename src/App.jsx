@@ -20,9 +20,11 @@ import LoginPage from './pages/loginPage/LoginPage';
 import SignUp from './pages/signUp/SignUp';
 import Footer from './components/footer/Footer';
 import Loader from './components/loader/Loader';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useScroll } from 'framer-motion';
+
 
 function App() {
+  const { scrollYProgress } = useScroll();
 
   const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -36,11 +38,15 @@ function App() {
     const element = useOutlet();
     return (
       <div>
+        <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
         <ScrollToTop />
         <Navbar />
         <Suspense fallback={<Loader />}>
-          {/* <Outlet/> */}
-          <AnimatePresence mode='wait'>
+          <Outlet/>
+          {/* <AnimatePresence mode='wait'>
             <motion.div
               key={pathname}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -50,7 +56,7 @@ function App() {
             >
               {element && React.cloneElement(element, { key: pathname })}
             </motion.div>
-          </AnimatePresence>
+          </AnimatePresence> */}
         </Suspense>
         <Footer />
       </div>

@@ -20,7 +20,7 @@ const NoticePage = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, inventore temporibus excepturi ex ea quae!</p>
         <div className="notice-list">
           {
-            isLoading ? 'Loading...' : error ? 'Something went wrong!' :
+            isLoading ? <CircularProgress sx={{m: '0 auto'}}/> : error ? 'Something went wrong!' :
               notice.length === 0 ? <h2 style={{ padding: '5rem', color: 'gray' }}>Notice Empty.</h2> :
                 notice.map(n => (
                   <div key={n._id} className="notice-single">

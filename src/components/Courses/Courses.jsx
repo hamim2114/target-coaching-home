@@ -6,7 +6,8 @@ import { useQuery } from '@tanstack/react-query';
 import Course from '../course/Course';
 import { Link } from 'react-router-dom';
 import { axiosReq } from '../../utils/axiosReq';
-import { CircularProgress } from '@mui/material'
+import { CircularProgress } from '@mui/material';
+import { motion } from 'framer-motion'
 
 const Courses = () => {
   const { isLoading, error, data: course } = useQuery({
@@ -65,8 +66,18 @@ const Courses = () => {
     <div className="courses">
       <div className="courses-wrapper">
         <div className="top">
-          <h1>Our <span>Course</span> </h1>
-          <p>Application programming interface voice-over (vo) instructor led training br curation, user created content</p>
+          <motion.h1
+            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+          >Our <span>Course</span> </motion.h1>
+          <motion.p
+            transition={{ duration: 1, ease: "easeOut", delay: .2 }}
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+          >Application programming interface voice-over (vo) instructor led training br curation, user created content</motion.p>
         </div>
         <div className="bottom">
           {
@@ -75,7 +86,15 @@ const Courses = () => {
                 <Slider ref={sliderRef} {...settings}>
                   {
                     course.map((data, i) => (
-                      <Course data={data} key={i} />
+                      <motion.div
+                        key={i}
+                        initial={{ y: 100, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: .5, ease: "easeOut", delay: i * 0.2 }}
+                        viewport={{ once: true }}
+                      >
+                        <Course data={data} key={i} />
+                      </motion.div>
                     ))
                   }
                 </Slider>

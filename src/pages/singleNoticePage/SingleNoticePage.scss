@@ -4,6 +4,7 @@
   margin: 5rem 0;
   &-wrapper {
     @include container;
+    @include shadow;
     background-color: #fff;
     padding: 20px 40px;
     .top-title{

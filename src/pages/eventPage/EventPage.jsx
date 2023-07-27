@@ -18,7 +18,7 @@ const EventPage = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, inventore temporibus excepturi ex ea quae!</p>
         <div className="event-list">
           {
-            isLoading ? <CircularProgress sx={{m: '6rem'}} /> : error ? 'Something went wrong!' :
+            isLoading ? <CircularProgress sx={{m: '0 auto'}} /> : error ? 'Something went wrong!' :
               event.length === 0 ? <h2 style={{ padding: '5rem', color: 'gray' }}>Event Empty.</h2> :
                 event.map(e => (
                   <div key={e._id} className="event-single">

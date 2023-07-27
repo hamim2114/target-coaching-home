@@ -23,21 +23,21 @@ const SingleBlogPage = () => {
   return (
     <>
       <div className="blog-bg-img">
-        <img src='/blogbg.jpg'alt="" />
+        <img src='/blogbg.jpg' alt="" />
       </div>
       {
-        isLoading ? <CircularProgress sx={{m: '10rem'}}/> : error ? 'Something went wrong!' :
-        !data ? <h2 style={{ padding: '15rem', color: 'gray' }}>Blog Not Found!</h2> :
-        <div className="blog-single">
-        <div className="wrapper">
-          <h1>{data.title}<hr /></h1>
-          <div className='info'>
-            <div className="time"><MdOutlineAccessTimeFilled /> {formattedDate}</div>
-          </div>
-          <div className="text">{parse(data.body)}</div>
-          <Link to='/blog' className='back-arrow'><BsArrowLeft />Back to Blogs</Link>
-        </div>
-      </div>
+        isLoading ? <CircularProgress sx={{ m: '10rem' }} /> : error ? 'Something went wrong!' :
+          !data ? <h2 style={{ padding: '15rem', color: 'gray' }}>Blog Not Found!</h2> :
+            <div className="blog-single">
+              <div className="wrapper">
+                <h1>{data.title}<hr /></h1>
+                <div className='info'>
+                  <div className="time"><MdOutlineAccessTimeFilled /> {formattedDate}</div>
+                </div>
+                <div className="text">{parse(data.body)}</div>
+                <Link to='/blog' className='back-arrow'><BsArrowLeft />Back to Blogs</Link>
+              </div>
+            </div>
       }
     </>
   )

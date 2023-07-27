@@ -14,6 +14,7 @@
 .blog-single {
   margin-top: 18rem;
   .wrapper {
+    @include shadow;
     background-color: #fff;
     max-width: 900px;
     margin: 0 auto;

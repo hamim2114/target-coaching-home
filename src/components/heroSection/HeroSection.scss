@@ -1,5 +1,10 @@
 @import '../../global.scss';
 
+.hero-main{
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
 .marque{
   position: absolute;
   top: 5rem;
@@ -64,6 +69,7 @@
       font-weight: bold;
       color: #fff;
       transition: .5s;
+      @include shadow;
       &:hover{
         background-color: transparent;
       }

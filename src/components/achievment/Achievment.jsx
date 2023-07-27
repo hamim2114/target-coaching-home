@@ -4,6 +4,7 @@ import { BsBookHalf } from "react-icons/bs";
 import { RiAwardFill } from "react-icons/ri";
 import CountUp from "react-countup";
 import ScroolTrigger from "react-scroll-trigger";
+import { motion } from 'framer-motion'
 import "./Achievment.scss";
 
 const Achievment = () => {
@@ -12,18 +13,32 @@ const Achievment = () => {
   return (
     <section className="achievment-section">
       <div className="content-wrapper">
-        <h1 className="title" >
+        <motion.h1
+          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          className="title" >
           Our <span className="text-green">Achievement</span>
-        </h1>
-        <p
+        </motion.h1>
+        <motion.p
+          transition={{ duration: 1, ease: "easeOut", delay: .2 }}
+          initial={{ y: 200, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
           className="description"
         >
           Quibusdam veritatis qui omnis totam laboriosam harum magnam, ex
           quaerat cupiditate dicta. <br /> veritatis qui omnis totam laboriosam
           harum magnam, ex quaerat cupiditate
-        </p>
+        </motion.p>
         <div className="grid-wrapper">
-          <div className="achievement-item">
+          <motion.div
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="achievement-item">
             <FaGraduationCap className="icon" />
             <div className="count-wrapper">
               <ScroolTrigger onEnter={() => setViewPort(true)}></ScroolTrigger>
@@ -32,9 +47,14 @@ const Achievment = () => {
               </h1>
               <p>STUDENTS</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="achievement-item">
+          <motion.div
+            transition={{ duration: 1.5, ease: "easeOut", delay: .2 }}
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="achievement-item">
             <RiAwardFill className="icon" />
             <div className="count-wrapper">
               <h1 className="count">
@@ -42,9 +62,14 @@ const Achievment = () => {
               </h1>
               <p>GRADUATE</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="achievement-item">
+          <motion.div
+            transition={{ duration: 1.5, ease: "easeOut", delay: .4 }}
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="achievement-item">
             <FaAward className="icon" />
             <div className="count-wrapper">
               <h1 className="count">
@@ -52,9 +77,14 @@ const Achievment = () => {
               </h1>
               <p>AWARD WINNING</p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="achievement-item">
+          <motion.div
+            transition={{ duration: 1.5, ease: "easeOut", delay: .6 }}
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="achievement-item">
             <BsBookHalf className="icon" />
             <div className="count-wrapper">
               <h1 className="count">
@@ -62,7 +92,7 @@ const Achievment = () => {
               </h1>
               <p>FACULTIES</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

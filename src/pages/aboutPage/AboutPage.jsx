@@ -7,6 +7,7 @@ import AnimationStyles from 'react-awesome-slider/src/styled/fold-out-animation/
 import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { axiosReq } from '../../utils/axiosReq';
+import { CircularProgress } from '@mui/material';
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 
@@ -23,7 +24,7 @@ const AboutPage = () => {
             <div className="top">
               <div className="gallery">
                 {
-                  data &&
+                  isLoading ? <CircularProgress sx={{m: '0 auto'}} /> :
                   <AutoplaySlider
                     animation="foldOutAnimation"
                     cssModule={[CoreStyles, AnimationStyles]}

@@ -2,6 +2,7 @@ import './TeachersPage.scss';
 import { useQuery } from '@tanstack/react-query'
 import Teacher from '../../components/teacher/Teacher'
 import { axiosReq } from '../../utils/axiosReq';
+import { CircularProgress } from '@mui/material';
 
 const TeachersPage = () => {
   const { isLoading, error, data: team } = useQuery({
@@ -19,7 +20,7 @@ const TeachersPage = () => {
         <div className="bottom">
           <div className="teacher-sec">
             {
-              isLoading ? 'Loading..' : error ? 'Something went wrong!' :
+              isLoading ? <CircularProgress sx={{m: '0 auto'}}/> : error ? 'Something went wrong!' :
               team.length === 0 ? <h2 style={{ padding: '5rem', color: 'gray' }}>Teacher Empty.</h2> :
               team.map((teacher, index) => (
                 <Teacher key={index} teacher={teacher} />
