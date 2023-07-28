@@ -1,7 +1,6 @@
 import './WelcomeSec.scss'
 import { FaChalkboardTeacher } from 'react-icons/fa'
 import { TbCertificate } from 'react-icons/tb'
-import { Fade, Slide } from "react-awesome-reveal";
 
 const WelcomeSec = () => {
 
@@ -10,12 +9,12 @@ const WelcomeSec = () => {
       <div className='welcomeSecMain'>
 
         <div className='welcome-sec'>
-          <Slide direction='up'>
+        
             <h1 className='welcome-txt'>
-              Welcome to <br /> <span>Target Coaching Home</span></h1></Slide>
-          <Fade cascade damping={1e-1} className='p'>
+              Welcome to <br /> <span>Target Coaching Home</span></h1>
+          <p>
             Ecosystem blended learning off-the-shelf learning storytelling explainer animation completion criteria.
-          </Fade>
+          </p>
           <div className="welcome-sec-features">
             <div
 

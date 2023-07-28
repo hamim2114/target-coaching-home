@@ -11,14 +11,12 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <HeroSection />
-      <div className="homepage-sub">
-        <Wave />
-        <WelcomeSec />
-        <Courses />
-        <Achievment />
-        <Teachers />
-        <Blogs />
-      </div>
+      <Wave />
+      <WelcomeSec />
+      <Courses />
+      <Achievment />
+      <Teachers />
+      <Blogs />
     </div>
   )
 }
