@@ -22,12 +22,11 @@ editing, creation, and deletion operations.
 <h3>Technology Stack:</h3>
 <b>Frontend:</b> React, Material-UI, SCSS, React Query, and Redux.
 <br/>
-<b>Backend:</b> Node, Express, MongoDB, Mongoose, JWT, Cloudinary, Multer, nodemailer.
+<b>Backend:</b> Node, Express, MongoDB, Mongoose, JWT, Cloudinary, Multer, nodemailer.<br/>
 
+
+[Live Link](https://targetcoachinghome.vercel.app/) 
 <br/>
-
-[Live Link](https://targetcoachinghome.vercel.app/)
-
 [Client Code](https://github.com/hamim2114/target-coaching-home)
 <br/>
 [admin Code](https://github.com/hamim2114/target-coaching-admin)
